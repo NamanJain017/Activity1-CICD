@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: activity1-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: activity1-web
+  template:
+    metadata:
+      labels:
+        app: activity1-web
+    spec:
+      containers:
+        - name: web
+          image: IMAGE_PLACEHOLDER
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80
