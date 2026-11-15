@@ -15,6 +15,6 @@ spec:
       containers:
         - name: web
           image: IMAGE_PLACEHOLDER
-          imagePullPolicy: Never
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
